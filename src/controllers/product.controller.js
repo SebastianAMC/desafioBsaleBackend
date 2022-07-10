@@ -11,6 +11,19 @@ const getProducts = async (req, res) => {
     }
 };
 
+const getByCategoryProducts = async (req, res) => {
+    try {
+        const connection = await getConnection();
+        const id = req.params.id;
+        const result = await connection.query("SELECT p.*, c.name as category from product p inner join category c on p.category = c.id WHERE c.id=? ",id);
+        res.json(result);
+    } catch (error) {
+        res.status(500);
+        res.send(error.message);
+    }
+};
+
 export const methods = {
     getProducts,
+    getByCategoryProducts
 };
