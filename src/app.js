@@ -1,6 +1,5 @@
 import express from "express";
 import morgan from "morgan";
-// Routes
 import productRoutes from "./routes/product.routes";
 
 const app = express();
