@@ -23,7 +23,20 @@ const getByCategoryProducts = async (req, res) => {
     }
 };
 
+const searchProducts = async (req, res) => {
+    try {
+        const connection = await getConnection();
+        const product = req.query.product
+        const result = await connection.query(`SELECT * from product WHERE name LIKE '%${product}%'`);
+        res.json(result);
+    } catch (error) {
+        res.status(500);
+        res.send(error.message);
+    }
+};
+
 export const methods = {
     getProducts,
-    getByCategoryProducts
+    getByCategoryProducts,
+    searchProducts
 };
