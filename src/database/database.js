@@ -1,5 +1,5 @@
 import mysql from "promise-mysql";
-import config from "./../config";
+import config from "./../config.js";
 
 const pool = mysql.createPool({
     host: config.host,
@@ -8,11 +8,9 @@ const pool = mysql.createPool({
     password: config.password
 });
 
-const getConnection = () => {
+ const getConnection = () => {
 
     return pool;
 };
 
-module.exports = {
-    getConnection
-};
+module.exports = getConnection;
