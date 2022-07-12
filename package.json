@@ -20,10 +20,11 @@
   },
   "homepage": "https://github.com/SebastianAMC/desafioBsaleBackend#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
-    "promise-mysql": "^5.2.0",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "promise-mysql": "^5.2.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.6",
