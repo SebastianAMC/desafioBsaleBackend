@@ -8,9 +8,9 @@ const pool = mysql.createPool({
     password: config.password
 });
 
- const getConnection = () => {
+export const getConnection = () => {
 
     return pool;
 };
 
-module.exports = getConnection;
+// module.exports = getConnection;
