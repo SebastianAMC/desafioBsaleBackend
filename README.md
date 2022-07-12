@@ -2,12 +2,7 @@
 
 Aplicación de backend creada para cumplir con el desafío Bsale, para optar por una vacante de empleo dentro de la empresa.
 
-Para utilizar a nivel local, es necesario descargar el repositorio e instalar lós modulos de node mediante "npm install" y crear el archivo .env entro de la carpeta raíz que contenga los siguientes datos:
-
-- HOST=mdb-test.c6vunyturrl6.us-west-1.rds.amazonaws.com
-- DATABASE=bsale_test
-- USER=bsale_test
-- PASSWORD=bsale_test
+Para utilizar a nivel local, es necesario descargar el repositorio e instalar lós modulos de node mediante "npm install" y crear el archivo .env dentro de la carpeta raíz que contenga las credenciales de la base de datos: HOST, DATABASE, USER y PASSWORD.
 
 La aplicación está desarrollada para obtener productos de una base de datos que simula una tienda.
 Los métodos utilizados son los siguientes:
