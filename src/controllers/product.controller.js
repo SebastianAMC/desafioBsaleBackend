@@ -11,6 +11,18 @@ const getProducts = async (req, res) => {
     }
 };
 
+const getCategories = async (req, res) => {
+    try {
+        const connection = await getConnection();
+        const id = req.params.id;
+        const result = await connection.query("SELECT * from category");
+        res.json(result);
+    } catch (error) {
+        res.status(500);
+        res.send(error.message);
+    }
+}
+
 const getByCategoryProducts = async (req, res) => {
     try {
         const connection = await getConnection();
@@ -37,6 +49,7 @@ const searchProducts = async (req, res) => {
 
 export const methods = {
     getProducts,
+    getCategories,
     getByCategoryProducts,
     searchProducts
 };
